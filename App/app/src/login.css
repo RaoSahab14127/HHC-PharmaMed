@@ -1,0 +1,106 @@
+
+*{
+    text-decoration: none;
+}
+.Login_Main{
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Login_MainDiv{
+    background-color: rgb(200, 100, 247);
+    height: 60%;
+    width: 60%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid purple;
+
+}
+.Login_Top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.Login_Logo{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Login_Logo>img{
+    height: 60%;
+    width: 30%;
+    margin-bottom: 20px;
+    
+
+}
+.Login_Username{
+    margin-bottom: 20px;
+    height: 30px;
+    width: 80%;
+    color: purple;
+    
+    
+}
+.Login_Password{
+    margin-bottom: 30px;
+    height: 30px;
+    width: 80%;
+    color: purple;
+    
+
+}
+.Login_Password>input{
+    width: 95%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 0% 2.5%;
+
+}
+.Login_Username>input{
+    width: 95%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 0% 2.5%;
+
+}
+.Login_Submit{
+    margin-bottom: 5px;
+    
+}
+.Login_Bottom{
+    height: 10%;
+    width: 100%;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(238, 238, 238);
+
+}
+.Login_Submit>button{
+    background-color: blueviolet;
+    height: 30px;
+    width: 160px;
+    border-radius: 20px;
+    color:rgb(238, 238, 238);
+
+}

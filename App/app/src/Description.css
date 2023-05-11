@@ -1,0 +1,52 @@
+.Des_Main{
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+}
+.Des_Value{
+    border: 1px solid black;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+flex-direction: column;
+}
+.Des_Pic{
+    border: 1px solid black;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.Des_MainContent{
+border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+.Des_MainContent1{
+height: 100%;
+    width: 100%;
+}
+.Des_MainContent2{
+height: 100%;
+    width: 100%;
+display: flex;
+    align-items: center;
+    flex-direction: column;
+border: 1px solid red;
+
+}
+.Des_MainContentCounter{
+display: flex;
+    align-items: center;
+
+}
