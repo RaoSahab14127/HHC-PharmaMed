@@ -10,10 +10,10 @@ function App() {
       // <Login/>
     }
     {
-      // <HomeMed/>
+      <HomeMed/>
     }
     {
-    <Description/>
+    // <Description/>
     }
     </div>
   )

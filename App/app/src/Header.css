@@ -1,0 +1,40 @@
+.HomeMed_Top{
+    background-color: rgb(255, 255, 255);
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Top_First{
+    height: 100%;
+    width: 15%;
+
+}
+.Top_First>img{
+    height: 100%;
+    width: 100%;
+}
+.Top_Second{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.Top_Third{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 15%;
+}
+.Top_Fourth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 15%;
+}
