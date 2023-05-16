@@ -3,8 +3,7 @@ import HomeMed from "./HomeMed"
 import ScreenCart from "./ScreenCart"
 import ScreenDes from "./ScreenDes"
 import React, { useState } from "react";
-
-import Login from "./log"
+import Login from "./Login";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
