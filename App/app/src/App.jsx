@@ -1,22 +1,27 @@
 
 import HomeMed from "./HomeMed"
-import Login from "./Login"
-import Description from "./Description"
-function App() {
-  
-  return (
-    <div className="App"> 
-    {
-      // <Login/>
-    }
-    {
-      <HomeMed/>
-    }
-    {
-    // <Description/>
-    }
-    </div>
-  )
-}
+import ScreenCart from "./ScreenCart"
+import ScreenDes from "./ScreenDes"
+import React, { useState } from "react";
 
-export default App
+import Login from "./log"
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+function App() {
+  const [user, setUser] = useState("");
+  const [sign, setSign] = useState("");
+  return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomeMed />} />
+          <Route path="/Signin" element={<Login />} />
+          <Route path="/Cart" element={<ScreenCart />} />
+          <Route path="/Description" element={<ScreenDes />} />
+          
+          <Route path="/*" element={ <div>Page 404 Error</div>} />
+        </Routes>
+      </BrowserRouter>
+
+  );
+}
+export default App;

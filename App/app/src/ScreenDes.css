@@ -1,4 +1,4 @@
-.HomeMed_Main{
+.Des_Main1{
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -7,14 +7,14 @@
     justify-content: center;
 
 }
-.HomeMed_MainProducts{
+.Des_MainDes{
     height: 70%;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     align-items: center;
-    overflow: scroll;
+
 
     
 }
