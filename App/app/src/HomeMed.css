@@ -7,8 +7,15 @@
     justify-content: center;
 
 }
+
 .HomeMed_MainProducts{
     height: 70%;
+    width: 100%;
+
+    
+}
+.HomeMed_MainProducts>div{
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     width: 100%;

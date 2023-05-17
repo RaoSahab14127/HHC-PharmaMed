@@ -9,7 +9,7 @@ function CartMed() {
         <div className='MedList_Main_Pic'>Pic</div>
         <div className='MedList_Main_Name'>Name</div>
         <div className='MedList_Main_Price'>Price</div>
-        <div className='MedList_Main_Quantity'><button>+</button>Quantity<button>+</button></div>
+        <div className='MedList_Main_Quantity'><button>+</button>Quantity<button>-</button></div>
         <div className='MedList_Main_Total'>Total</div>
       </div>
     

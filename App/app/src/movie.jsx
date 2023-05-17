@@ -38,9 +38,10 @@
 //   export default MovieData;
 
 
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useContext } from 'react';
+import UserContext from './userContext';
 import Papa from 'papaparse';
+import Med from './Med'
 const MovieData = () => {
     const [data, setData] = useState({});
     Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vS2KVLO1ZDlL8ufE7v1YdLnoLXy7tK3XQdES1oQjb1WsoumXq-1TUrirLLFAAtYR3u4NCFkZNhP4-Ov/pub?gid=0&single=true&output=csv", {
@@ -51,18 +52,18 @@ const MovieData = () => {
       },
     });
     const movies = Array.from(data);
+    const { setUser, user } = useContext(UserContext);
     return (
       
             <div>
               {movies.map((data) => {
-                if (data.EMRNumber == "EMR001") {
+                if (data.EMRNumber == user) {
                   return(
-                    <div>
-                      <ul>
-                      <li key={data.Serial}>
-            {data.EMRNumber} ({data.Name}) - Rating {data.Med}
-          </li>
-          </ul>
+                    <div key={data.Serial}>
+                    
+            <Med p = {data}/>
+          
+
                     </div>
               )
                 }

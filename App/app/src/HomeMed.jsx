@@ -7,11 +7,11 @@ import Footer from './Footer'
 import Description from './Description'
 import Med from './Med'
 import Cartmain from './cartmain';
-import ExcelDatabase from './excel';
+import UserContext from './userContext'
 function HomeMed() {
   return (
     <div className='HomeMed_Main'>
-      
+      <Header/>
       <div className='HomeMed_MainProducts'>
       <MovieData/>
       </div>

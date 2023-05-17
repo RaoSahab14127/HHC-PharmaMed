@@ -5,11 +5,15 @@ import ScreenDes from "./ScreenDes"
 import React, { useState } from "react";
 import Login from "./Login";
 import "./App.css";
+import UserContext from "./userContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   const [user, setUser] = useState("");
   const [sign, setSign] = useState("");
+  const [des, setDes] = useState({});
   return (
+    <UserContext.Provider value={{ user, setUser , sign, setSign , des, setDes}}>
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomeMed />} />
@@ -20,6 +24,7 @@ function App() {
           <Route path="/*" element={ <div>Page 404 Error</div>} />
         </Routes>
       </BrowserRouter>
+      </UserContext.Provider>
 
   );
 }

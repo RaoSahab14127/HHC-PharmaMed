@@ -1,13 +1,15 @@
 import "./app.css"
 import "./login.css"
-import React, { useState } from 'react';
+import React, { useState , useContext} from 'react';
 import * as XLSX from 'xlsx';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import UserContext from './userContext'
 
 function Login() {
+  const { setUser, user } = useContext(UserContext);
     const navigate = useNavigate();
-    const [username, setUsername] = useState('');
+  
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -23,7 +25,7 @@ function Login() {
       // Convert Excel data to JSON or perform parsing if necessary
       const excelData = await convertExcelData(response.data);
       const foundUser = excelData.find(
-        (user) => user.Username === username && user.Password == password
+        (user1) => user1.Username === user && user1.Password == password
       );
 
       if (foundUser) {
@@ -57,7 +59,7 @@ function Login() {
             
             <form onSubmit={handleFormSubmit}>
                 <div className="Login_Username">
-                    <input type="text" placeholder='EMR Number' id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+                    <input type="text" placeholder='EMR Number' id="username" value={user} onChange={(e) => setUser(e.target.value)} />
                 </div>
                 <div className="Login_Password">
                 <input
