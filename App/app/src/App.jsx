@@ -11,8 +11,10 @@ function App() {
   const [user, setUser] = useState("");
   const [sign, setSign] = useState("");
   const [des, setDes] = useState({});
+  const movies = [];
+  const [cart, setCart] = useState([]);
   return (
-    <UserContext.Provider value={{ user, setUser , sign, setSign , des, setDes}}>
+    <UserContext.Provider value={{ user, setUser , sign, setSign , des, setDes, movies, cart, setCart}}>
 
       <BrowserRouter>
         <Routes>
