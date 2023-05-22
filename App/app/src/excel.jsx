@@ -17,7 +17,6 @@ function ExcelDatabase() {
     // Convert the sheet data to JSON
     const data = XLSX.utils.sheet_to_json(worksheet);
 
-    console.log(data);
   })
   .catch(error => {
     console.error(error);

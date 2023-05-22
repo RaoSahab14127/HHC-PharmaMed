@@ -2,13 +2,14 @@
 import "./app.css"
 import "./Description.css"
 import React , {useContext, useState, useEffect} from 'react'
-
+import { useNavigate } from "react-router-dom";
 import UserContext from './userContext'
 
 function Description() {
+  const navigate = useNavigate();
   const [ dosePurchase, setDosePurchase ] = useState({quantity:0});
   const [ err, setErr ] = useState("");
-  console.log(dosePurchase)
+
   const { setDes, des } = useContext(UserContext);
   const { setCart, cart} = useContext(UserContext);
   const {movies } = useContext(UserContext);
@@ -33,28 +34,21 @@ function Description() {
   
     
     
+    
   }
+
   useEffect(() => {
-    // This function will be called after every render and when myArray is updated
-    console.log("myArray updated" , des);
-    buyfunc2();
+    console.log(des);
   }, [des]);
-  let buyfunc = async()=>{
+
+  let buyfunc = ()=>{
     
-    setDes({
-      ...des, // Spread operator to create a copy of the object
-      quantity: dosePurchase.quantity 
-    });
+    var ab = {...des, quant: dosePurchase.quantity}
+    setCart([...cart, ab]);
+    setDes(ab)
     
-    //add to cart array
-  }
-  let buyfunc2 = ()=>{
-    const newArray = [...cart]; // Create a copy of the array
-    newArray.push(des); // Add the new element to the copied array
-    setCart(newArray);
-    console.log("77777777777777777777777777")
-    console.log(cart)
-    console.log("77777777777777777777777777")
+    
+    navigate("/")
 
     //add to cart array
   }

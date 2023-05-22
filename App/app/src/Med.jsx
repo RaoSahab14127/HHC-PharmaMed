@@ -10,7 +10,7 @@ function Med(props) {
   let gotodes =(data)=>{
     setDes(data);
     navigate("/Description")
-    console.log(data)
+    
 
   }
   return (

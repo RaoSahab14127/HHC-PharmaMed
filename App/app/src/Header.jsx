@@ -10,13 +10,14 @@ function Header() {
     <div className='HomeMed_Top'>
         <div className='Top_First'><img src="https://human-healthcare.com/wp-content/uploads/2023/02/HH-logo-Option-2-e1678900350865.png" alt="sdfasd" /></div>
         <div className='Top_Second'><input type="text" /><button>Search</button></div>
-        <div className='Top_Third'>Cart</div>
+        <div className='Top_Third'><Link to="/Cart">
+                Cart
+              </Link></div>
         
         {user ? (
           
-          <div>
-          {console.log(user)}  
-              <Link to="/asdf">
+          <div>  
+              <Link to="/" onClick={()=>(setUser(""))}>
                 Logout
               </Link>
               </div>

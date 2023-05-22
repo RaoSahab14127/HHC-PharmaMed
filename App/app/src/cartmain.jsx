@@ -1,9 +1,14 @@
-import React from 'react'
+
 import "./app.css"
 import "./cartmain.css"
 import CartMed from "./cartMed"
+import UserContext from './userContext'
+import React , {useContext} from 'react'
 
 function Cartmain() {
+    const { setDes, des } = useContext(UserContext);
+    const {  setCart, cart } = useContext(UserContext);
+
     return (
         <div className='cart_Main'>
             <div className='cart_Main1'>
@@ -14,22 +19,27 @@ function Cartmain() {
                     <div className='cart_Main1Header4'>Total</div>
                 </div>
                 <div className='cart_Main1Items'>
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
-                    <CartMed />
+                  
+                    
+                    {cart.map((data) => 
+                      
+                          <div key={data.Serial
+                          }>
+                          
+                  
+                          <CartMed inp= {data}/>
+                          
+                
+      
+                          </div>
+    
+                      
+                    
+                    )}
+                    
+                    {console.log(cart)}
+            
+    
                 </div>
                 <div className='cart_Main1Button'>
                     <button>Continue Shopping</button><button>Update Cart</button>
@@ -38,7 +48,21 @@ function Cartmain() {
             <div className='cart_Main2'>
                 <div className='cart_Main2Heading'>Cart Total</div>
                 <div><div>Subtotal</div>
-                <div>565</div></div>
+                <div>{cart.map((data) => 
+                      
+                      <div key={data.Serial
+                      }>
+                      
+              
+                      {data.Name}
+                      
+            
+  
+                      </div>
+
+                  
+                
+                )}</div></div>
                 
                 <div>
                 <div>Shipping</div>

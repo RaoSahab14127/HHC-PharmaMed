@@ -48,7 +48,7 @@ function Login() {
     const workbook = XLSX.read(data, { type: 'array' });
     const sheetName = workbook.SheetNames[0];
     const jsonData = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
-    console.log(jsonData)
+  
     return jsonData;}
 
   return (
