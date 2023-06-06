@@ -9,11 +9,11 @@ import Med from './Med'
 import Cartmain from './cartmain';
 import UserContext from './userContext'
 import axios from "axios";
-import {data} from "./server";
+
+
 
 
 function HomeMed() {
-  data();
   return (
     <div className='HomeMed_Main'>
       <Header/>
