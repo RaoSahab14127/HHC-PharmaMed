@@ -1,5 +1,5 @@
 import React , {useContext} from 'react'
-import "./app.css"
+import "./App.css"
 import "./Med.css"
 import { useNavigate } from "react-router-dom";
 import UserContext from './userContext'
