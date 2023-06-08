@@ -18,10 +18,18 @@ const MovieData = () => {
   
   
   const fetchData = async () => {
+   let page = 1;
+   let perPage= 100;
+    let allpro = []
     try {
+      while(page<29){
+      const response = await WooCommerce.get('products',  { per_page: perPage,page: page });
+      allpro = [...allpro, response.data]
+      alert(page)
+      page++;
       
-      const response = await WooCommerce.get('products',  { per_page: 100,page:2 });
-      setData1(response.data);
+      }
+     setData1(allpro);
     } catch (error) {
       console.error('Error retrieving data:', error);
     }
