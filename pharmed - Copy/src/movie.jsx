@@ -24,8 +24,7 @@ const MovieData = () => {
     try {
       while(page<29){
       const response = await WooCommerce.get('products',  { per_page: perPage,page: page });
-      allpro = [...allpro, response.data]
-      alert(page)
+      allpro = allpro.concat(response.data)      
       page++;
       
       }
@@ -48,16 +47,16 @@ const MovieData = () => {
   const filteredArray = data1.filter((item1) =>
   filteredUser.some((item2) => item1.name === item2.Name)
   );
-  console.log(data1)
 
     return (
       
             <div>
-              {filteredArray.map((data) => {
+              { data1.map((data) => {
                 
-                    <div key={data.Serial}>
+                    <div key={data.id}>
+                      {alert(data.name)}
                     
-            <Med p = {data}/>
+            {/* <Med p = {data}/> */}
           
 
                     </div>
