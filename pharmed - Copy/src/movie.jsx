@@ -49,6 +49,7 @@ const MovieData = () => {
   const filteredArray = data1.filter((item1) =>
   filteredUser.some((item2) => item1.slug === item2.Med)
   );
+  console.log(data1)
  
 
     return (
