@@ -19,8 +19,8 @@ function Med(props) {
       <div className='HomeMed_Mid'>
         <div className='HomeMed_MidPic'><img src="https://human-healthcare.com/wp-content/uploads/2023/02/HH-logo-Option-2-e1678900350865.png" alt="" /></div>
         <div className='HomeMed_MidData'>
-          <div>{props.p.Med}</div>
-          <div>{props.p.Name}</div>
+          <div>{props.p.name}</div>
+          <div>{props.p.price}</div>
           <div><button onClick={()=>gotodes(props.p)}>BuyNow</button></div>
         </div>
       </div>

@@ -50,25 +50,25 @@ const MovieData = () => {
 
     return (
       
-            <div>
-              { data1.map((data) => {
-                
-                    <div key={data.id}>
-                      {alert(data.name)}
-                    
-            {/* <Med p = {data}/> */}
-          
-
-                    </div>
-              })}
-                
-                
+      <div>
+      {data1.map((data) => {
+        if (true) {
+          return(
+            <div key={data.id}>
               
-              
-  
-  
+            
+    <Med p = {data}/>
   
             </div>
+      )
+        }
+        
+      
+      })}
+
+
+
+    </div>
           
     )
   }
