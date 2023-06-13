@@ -40,7 +40,6 @@ function Description() {
   useEffect(() => {
     console.log(des);
   }, [des]);
-
   let buyfunc = ()=>{
     
     var ab = {...des, quant: dosePurchase.quantity}
@@ -59,22 +58,25 @@ function Description() {
             <div className='Des_Value'>
                 <div className='Des_MainContent'>
                     <div className='Des_MainContent1'>
-                        <div>{des.Med}</div>
+                        <div>{des.name}</div>
+                        <div>{des?.meta_data[3]?.value}</div>
+                        <div>{des.sale_price}</div>
+                        <div>{des.id}</div>
                         <div>Guarantee: 100% Genuine Product</div>
                     </div>
                     <div className='Des_MainContent2'>
-                        <div>Availability: In stock</div>
-                        <div>{des.Name}</div>
+                        <div>Availability: {des.stock_status}</div>
+                        <div>{des?.categories[0]?.name}</div>
                         <div className='Des_MainContentCounter'><button onClick={increment}>+</button><div>{dosePurchase.quantity}</div><button onClick={decrement}>-</button></div>
 <div><button onClick={buyfunc}>Buy Now</button></div>
 {err && <p className="error">{err}</p>}
                     </div>
                     
                 </div>
-                <div className='Des_Atp'>Advice to patient</div>
-                <div className='Des_Ind'>Indication</div>
+                <div className='Des_Atp'>{des?.meta_data[9]?.value}</div>
+                <div className='Des_Ind'>{des?.meta_data[13]?.value}</div>
             </div>
-            <div className='Des_Pic'> Pic</div>
+            <div className='Des_Pic'> <img src={(des.images.length!==0)?(des.images[0].src):(des.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/Product-1-280x280.png":(des.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/product-3-280x280.png":"https://genmed.pk/wp-content/uploads/2020/01/topical-280x280.png"} alt={"IMAGE"}/></div>
 
         </div>
     </div>
