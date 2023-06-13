@@ -24,8 +24,15 @@ const MovieData = () => {
    let perPage= 100;
     let allpro = []
     try {
-      while(page<29){
+      while(true){
       const response = await WooCommerce.get('products',  { per_page: perPage,page: page });
+      console.log(response)
+      
+      alert(page)
+      if((response.data).length===0){
+        alert("ok")
+        break;
+      }
       allpro = allpro.concat(response.data)      
       page++;
       
@@ -55,6 +62,7 @@ const MovieData = () => {
     final_array.push(hdata)
   } 
   filteredArray = final_array;
+  console.log(filteredArray)
  
 
     return (
