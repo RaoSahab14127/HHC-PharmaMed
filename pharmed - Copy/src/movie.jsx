@@ -46,10 +46,15 @@ const MovieData = () => {
     const movies = Array.from(data);
     const { setUser, user } = useContext(UserContext);
     const filteredUser = movies.filter((item1) => item1.EMRNumber === user)
-  const filteredArray = data1.filter((item1) =>
+  let filteredArray = data1.filter((item1) =>
   filteredUser.some((item2) => item1.slug === item2.Med)
   );
-  console.log(data1)
+  const final_array  =[] 
+  for(var i = 0; i<filteredArray.length; i++){
+    let hdata = {...filteredArray[i], Amounti : filteredUser[i].Amount, Durationi : filteredUser[i].Duration}
+    final_array.push(hdata)
+  } 
+  filteredArray = final_array;
  
 
     return (
