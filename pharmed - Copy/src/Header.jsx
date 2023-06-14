@@ -6,6 +6,10 @@ import UserContext from './userContext'
 
 function Header() {
   const { setUser, user } = useContext(UserContext);
+  const {setSign, sign} =  useContext(UserContext);
+  const {setDes, des} =  useContext(UserContext);
+  const {setPro, pro} =  useContext(UserContext);
+  const {setCart, cart} =  useContext(UserContext);
   return (
     <div className='HomeMed_Top'>
         <div className='Top_First'><img src="https://human-healthcare.com/wp-content/uploads/2023/02/HH-logo-Option-2-e1678900350865.png" alt="sdfasd" /></div>
@@ -17,7 +21,7 @@ function Header() {
         {user ? (
           
           <div>  
-              <Link to="/" onClick={()=>(setUser(""))}>
+              <Link to="/" onClick={()=>{setUser(""); setSign(""); setCart([]); setDes({}); setPro([])}}>
                 Logout
               </Link>
               </div>
