@@ -4,6 +4,8 @@ import Papa from 'papaparse';
 import Med from './Med'
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 const MovieData = () => {
+  const { setPro, pro } = useContext(UserContext);
+
   const [data1, setData1] = useState([]);
   const WooCommerce = new WooCommerceRestApi({
     url: 'https://genmed.pk/',
@@ -13,9 +15,10 @@ const MovieData = () => {
     queryStringAuth: true,
   });
   useEffect(() => {
-    fetchData();
+    if(pro.length === 0){
+    fetchData()}
     
-
+    
   }, []);
   
   
@@ -26,11 +29,9 @@ const MovieData = () => {
     try {
       while(true){
       const response = await WooCommerce.get('products',  { per_page: perPage,page: page });
-      console.log(response)
       
-      alert(page)
       if((response.data).length===0){
-        alert("ok")
+       
         break;
       }
       allpro = allpro.concat(response.data)      
@@ -51,20 +52,23 @@ const MovieData = () => {
       },
     });
     const movies = Array.from(data);
+    
     const { setUser, user } = useContext(UserContext);
     const filteredUser = movies.filter((item1) => item1.EMRNumber === user)
   let filteredArray = data1.filter((item1) =>
   filteredUser.some((item2) => item1.slug === item2.Med)
   );
   const final_array  =[] 
+  if(pro.length === 0){
   for(var i = 0; i<filteredArray.length; i++){
     let hdata = {...filteredArray[i], Amounti : filteredUser[i].Amount, Durationi : filteredUser[i].Duration}
     final_array.push(hdata)
   } 
-  filteredArray = final_array;
-  console.log(filteredArray)
+  filteredArray = final_array}
+  else{
+    filteredArray = pro
+  }
  
-
     return (
       
       <div>
@@ -74,7 +78,7 @@ const MovieData = () => {
             <div key={data.id}>
               
             
-    <Med p = {data}/>
+    <Med p = {data} q = {filteredArray}/>
   
             </div>
       )
@@ -82,11 +86,8 @@ const MovieData = () => {
         
       
       })}
-
-
-
     </div>
           
     )
   }
-  export default MovieData;
+export default MovieData;

@@ -6,9 +6,11 @@ import UserContext from './userContext'
 
 function Med(props) {
   const { setDes, des } = useContext(UserContext);
+  const { setPro, pro } = useContext(UserContext);
   const navigate = useNavigate();
-  let gotodes =(data)=>{
+  let gotodes =(data, data4)=>{
     setDes(data);
+    setPro(data4)
     navigate("/Description")
     
 
@@ -21,7 +23,7 @@ function Med(props) {
         <div className='HomeMed_MidData'>
           <div>{props.p.name}</div>
           <div>{props.p.price}</div>
-          <div><button onClick={()=>gotodes(props.p)}>BuyNow</button></div>
+          <div><button onClick={()=>gotodes(props.p,props.q )}>BuyNow</button></div>
         </div>
       </div>
   )

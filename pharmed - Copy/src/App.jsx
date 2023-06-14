@@ -11,11 +11,11 @@ function App() {
   const [user, setUser] = useState("");
   const [sign, setSign] = useState("");
   const [des, setDes] = useState({});
-  const movies = [];
+  const [pro, setPro] = useState([]);
   const [cart, setCart] = useState([]);
+ 
   return (
-    <UserContext.Provider value={{ user, setUser , sign, setSign , des, setDes, movies, cart, setCart}}>
-
+    <UserContext.Provider value={{ user, setUser , sign, setSign , des, setDes,  cart, setCart,pro, setPro}}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomeMed />} />

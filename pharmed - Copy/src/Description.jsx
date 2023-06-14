@@ -11,9 +11,11 @@ function Description() {
   const [ err, setErr ] = useState("");
 
   const { setDes, des } = useContext(UserContext);
+  const { setAllProduct, allProduct } = useContext(UserContext);
   const { setCart, cart} = useContext(UserContext);
-  const {movies } = useContext(UserContext);
+
   var MaxDose = Number(des.Amount) * Number(des.Duration)
+ 
   let increment = ()=>{
     
     if (dosePurchase.quantity<MaxDose){
@@ -38,7 +40,6 @@ function Description() {
   }
 
   useEffect(() => {
-    console.log(des);
   }, [des]);
   let buyfunc = ()=>{
     
