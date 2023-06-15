@@ -14,8 +14,8 @@ function Description() {
   const { setAllProduct, allProduct } = useContext(UserContext);
   const { setCart, cart} = useContext(UserContext);
 
-  var MaxDose = Number(des.Amount) * Number(des.Duration)
- 
+  var MaxDose = Number(des.Amounti) * Number(des.Durationi)
+
   let increment = ()=>{
     
     if (dosePurchase.quantity<MaxDose){
@@ -41,13 +41,16 @@ function Description() {
 
   useEffect(() => {
   }, [des]);
+
   let buyfunc = ()=>{
     
+    if((cart.filter((item)=>item?.name === des.name)).length===0){
     var ab = {...des, quant: dosePurchase.quantity}
     setCart([...cart, ab]);
-    setDes(ab)
-    
-    
+    setDes(ab)}
+    else{
+      alert("Already in cart")
+    } 
     navigate("/")
 
     //add to cart array

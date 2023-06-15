@@ -21,7 +21,6 @@ const MovieData = () => {
     
   }, []);
   
-  
   const fetchData = async () => {
    let page = 1;
    let perPage= 100;
