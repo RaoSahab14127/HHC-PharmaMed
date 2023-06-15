@@ -13,9 +13,10 @@ function App() {
   const [des, setDes] = useState({});
   const [pro, setPro] = useState([]);
   const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
  
   return (
-    <UserContext.Provider value={{ user, setUser , sign, setSign , des, setDes,  cart, setCart,pro, setPro}}>
+    <UserContext.Provider value={{ user, setUser , sign, setSign , des, setDes,  cart, setCart,pro, setPro, total, setTotal}}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomeMed />} />

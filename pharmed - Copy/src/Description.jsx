@@ -9,7 +9,7 @@ function Description() {
   const navigate = useNavigate();
   const [ dosePurchase, setDosePurchase ] = useState({quantity:0});
   const [ err, setErr ] = useState("");
-
+  const { setTotal, total } = useContext(UserContext);
   const { setDes, des } = useContext(UserContext);
   const { setAllProduct, allProduct } = useContext(UserContext);
   const { setCart, cart} = useContext(UserContext);
@@ -47,7 +47,12 @@ function Description() {
     if((cart.filter((item)=>item?.name === des.name)).length===0){
     var ab = {...des, quant: dosePurchase.quantity}
     setCart([...cart, ab]);
-    setDes(ab)}
+    setDes(ab)
+    if (total ===0){setTotal(((Number(dosePurchase.quantity)*Number(des.price))+200))}
+    else{
+      setTotal((total+(Number(dosePurchase.quantity)*Number(des.price)))) 
+    }
+  }
     else{
       alert("Already in cart")
     } 

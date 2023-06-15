@@ -4,11 +4,11 @@ import "./cartmain.css"
 import CartMed from "./cartMed"
 import UserContext from './userContext'
 import React , {useContext} from 'react'
-
+import { useNavigate } from "react-router-dom";
 function Cartmain() {
-    const { setDes, des } = useContext(UserContext);
+    const { setTotal, total } = useContext(UserContext);
     const {  setCart, cart } = useContext(UserContext);
-
+    const navigate = useNavigate();
     return (
         <div className='cart_Main'>
             <div className='cart_Main1'>
@@ -42,7 +42,7 @@ function Cartmain() {
     
                 </div>
                 <div className='cart_Main1Button'>
-                    <button>Continue Shopping</button><button>Update Cart</button>
+                    <button onClick={()=>navigate("/")}>Continue Shopping</button>
                 </div>
             </div>
             <div className='cart_Main2'>
@@ -50,11 +50,11 @@ function Cartmain() {
                 <div><div>Subtotal</div>
                 <div>{cart.map((data) => 
                       
-                      <div key={data.Serial
+                      <div key={data.id
                       }>
                       
-              
-                      {data.Name}
+
+                      {Number(data.price)*Number(data.quant)}
                       
             
   
@@ -66,10 +66,10 @@ function Cartmain() {
                 
                 <div>
                 <div>Shipping</div>
-                    <div>Flare reate : 150</div>
+                    <div>Flare reate : 200</div>
                 </div>
                 <div><div>Total</div>
-                    <div>1000</div></div>
+                    <div>{total}</div></div>
                 <div className='cart_Main2button'><button>Proceed</button></div>
             </div>
 
