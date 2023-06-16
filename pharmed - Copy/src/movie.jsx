@@ -1,10 +1,11 @@
 import React, { useState, useContext, useEffect } from 'react';
 import UserContext from './userContext';
+import "./loading.css"
 import Papa from 'papaparse';
 import Med from './Med'
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 const MovieData = () => {
-  const { setPro, pro } = useContext(UserContext);
+  const { pro } = useContext(UserContext);
 
   const [data1, setData1] = useState([]);
   const WooCommerce = new WooCommerceRestApi({
@@ -17,6 +18,7 @@ const MovieData = () => {
   useEffect(() => {
     if(pro.length === 0){
     fetchData()}
+
     
     
   }, []);
@@ -38,6 +40,7 @@ const MovieData = () => {
       
       }
      setData1(allpro);
+
     } catch (error) {
       console.error('Error retrieving data:', error);
     }
@@ -63,30 +66,47 @@ const MovieData = () => {
     let hdata = {...filteredArray[i], Amounti : filteredUser[i].Amount, Durationi : filteredUser[i].Duration}
     final_array.push(hdata)
   } 
-  filteredArray = final_array}
+  filteredArray = final_array
+
+}
   else{
     filteredArray = pro
   }
  
     return (
-      
       <div>
-      {filteredArray.map((data) => {
-        if (true) {
-          return(
-            <div key={data.id}>
+       
+      {(filteredArray.length ===0 && user!=="" )? (
+        <>
+        {data1.length===0 ? (
+          <div className="spinner">
+            <div className='spinnerspan'>Less than 2 Min</div>
+            <div className="half-spinner"></div>
+          </div>
+        ) : (
+          <div className="completed">&#x2713;</div>
+        )}
+        </>
+        ): (
+        <div>
+            {filteredArray.map((data) => {
+              if (true) {
+                return(
+                  <div key={data.id}>
+                    
+                  
+          <Med p = {data} q = {filteredArray}/>
+        
+                  </div>
+            )
+              }
               
             
-    <Med p = {data} q = {filteredArray}/>
-  
+            })}
             </div>
-      )
-        }
-        
-      
-      })}
-    </div>
           
+      )}
+      </div>  
     )
   }
 export default MovieData;

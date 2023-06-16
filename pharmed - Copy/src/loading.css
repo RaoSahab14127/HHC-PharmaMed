@@ -1,18 +1,21 @@
+
 .spinner {
-    width: 300px;
-    height: 300px;
+    width: 50%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
   }
   
-  .spinner span {
-    font-size: 2rem;
-    animation: fade 1s linear 0s infinite;
+  .spinnerspan {
+
+    animation: fade 1s linear 2s infinite;
     padding-right: 1rem;
   }
-  
+  .spinnerspan{
+    font-size: xx-large;
+  }
   .half-spinner {
     width: 50px;
     height: 50px;
@@ -23,7 +26,7 @@
   }
   
   .completed {
-    font-size: 2rem;
+
     color: #03fc4e;
   
     animation: bigger 1s linear;
