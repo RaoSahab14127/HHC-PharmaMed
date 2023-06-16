@@ -20,7 +20,7 @@ function CartMed(props) {
   return (
     <div className='MedList_Main'>
         <div className='MedList_Main_Cross'><button onClick={()=>handleRemoveItem(this, props.inp)} >Cross</button></div>
-        <div className='MedList_Main_Pic'><img src={(props.inp.images.length!==0)?(props.inp.images[0].src):(props.inp.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/Product-1-280x280.png":(props.inp.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/product-3-280x280.png":"https://genmed.pk/wp-content/uploads/2020/01/topical-280x280.png"} alt={"IMAGE"}/></div>
+        <div className='MedList_Main_Pic'><img height={"100%"} width={"100%"} src={(props.inp.images.length!==0)?(props.inp.images[0].src):(props.inp.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/Product-1-280x280.png":(props.inp.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/product-3-280x280.png":"https://genmed.pk/wp-content/uploads/2020/01/topical-280x280.png"} alt={"IMAGE"}/></div>
         <div className='MedList_Main_Name'>{props.inp.name}</div>
         <div className='MedList_Main_Price'>{props.inp.price}</div>
         <div className='MedList_Main_Quantity'>{props.inp.quant}</div>

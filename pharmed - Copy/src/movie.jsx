@@ -90,3 +90,8 @@ const MovieData = () => {
     )
   }
 export default MovieData;
+
+
+
+
+

@@ -70,7 +70,7 @@ function Cartmain() {
                 </div>
                 <div><div>Total</div>
                     <div>{total}</div></div>
-                <div className='cart_Main2button'><button>Proceed</button></div>
+                <div className='cart_Main2button'><button onClick={()=>navigate("/orderbilling")}>Proceed</button></div>
             </div>
 
         </div>

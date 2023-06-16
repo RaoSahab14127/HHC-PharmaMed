@@ -1,0 +1,81 @@
+
+.ob_Main1{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.ob_Mainob{
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    align-items: center;
+
+
+
+    
+}
+.ob1{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.ob2{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.cart_Main2button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+
+}
+.cart_Main2Heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+
+}
+.ob2>div{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    justify-content: space-between;
+
+}
+.ob1>label{
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ob1H{
+    width: 100%;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

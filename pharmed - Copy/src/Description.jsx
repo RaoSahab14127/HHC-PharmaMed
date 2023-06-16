@@ -85,7 +85,7 @@ function Description() {
                 <div className='Des_Atp'>{des?.meta_data[9]?.value}</div>
                 <div className='Des_Ind'>{des?.meta_data[13]?.value}</div>
             </div>
-            <div className='Des_Pic'> <img src={(des.images.length!==0)?(des.images[0].src):(des.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/Product-1-280x280.png":(des.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/product-3-280x280.png":"https://genmed.pk/wp-content/uploads/2020/01/topical-280x280.png"} alt={"IMAGE"}/></div>
+            <div className='Des_Pic'> <img height={"100%"} width={"100%"} src={(des.images.length!==0)?(des.images[0].src):(des.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/Product-1-280x280.png":(des.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/product-3-280x280.png":"https://genmed.pk/wp-content/uploads/2020/01/topical-280x280.png"} alt={"IMAGE"}/></div>
 
         </div>
     </div>
