@@ -87,7 +87,7 @@ const MovieData = () => {
             <div className="half-spinner"></div>
           </div>
         
-        ): ((user==="")?(<div>Please Sign in</div>):(
+        ): ((user==="")?(<div>Please Sign in to see Medicines</div>):(
           <div className='MainMedi'>
               {filteredArray.map((data) => {
                 if (true) {
