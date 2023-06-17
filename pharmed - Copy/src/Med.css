@@ -16,10 +16,10 @@
     align-items: center;
     justify-content: center;
 }
-.HomeMed_MidPic>img{
+
+.HomeMed_MidPic>img {
     height: 100%;
-    width: 100%;
-   
+    width: 70%;
 }
 .HomeMed_MidData{
     display: flex;
@@ -28,4 +28,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+img{
+    height: 100px;
+    width: 100px;
 }

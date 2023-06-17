@@ -20,7 +20,9 @@ function OrderBilling() {
     let pro_line = []
     if(cart.length !== 0){
         for(var i = 0; i<cart.length; i++){
-          let hdata = {}
+          let hdata = {
+            product_id: cart[i].id,
+            quantity: cart[i].quant }
           pro_line.push(hdata)
         } 
     
@@ -29,6 +31,7 @@ function OrderBilling() {
       else{
         alert("Empty Cart")
       }
+      
     const navigate = useNavigate();
     const data = {
         payment_method: "cod",
@@ -56,9 +59,7 @@ function OrderBilling() {
           postcode: "",
           country: "PK"
         },
-        line_items: [
-          
-        ],
+        line_items: pro_line,
         shipping_lines: [
           {
             method_id: "flat_rate",
@@ -67,6 +68,7 @@ function OrderBilling() {
           }
         ]
       };
+      
       let onorder = ()=>{
         console.log(data)
         WooCommerce.post("orders", data)

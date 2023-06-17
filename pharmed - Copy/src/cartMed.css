@@ -8,3 +8,7 @@
     padding: 5px;
 
 }
+.MedList_Main_Pic>img{
+    height: 50%;
+    width: 50%;
+}
