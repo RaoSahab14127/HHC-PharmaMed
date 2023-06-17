@@ -77,16 +77,12 @@ const MovieData = () => {
       <div>
        
       {(filteredArray.length ===0 && user!=="" )? (
-        <>
-        {data1.length===0 ? (
+        
           <div className="spinner">
             <div className='spinnerspan'>Less than 2 Min</div>
             <div className="half-spinner"></div>
           </div>
-        ) : (
-          <div className="completed">&#x2713;</div>
-        )}
-        </>
+        
         ): (
         <div>
             {filteredArray.map((data) => {
