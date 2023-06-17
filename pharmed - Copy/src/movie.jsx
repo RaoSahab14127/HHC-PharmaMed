@@ -4,8 +4,10 @@ import "./loading.css"
 import "./movie.css"
 import Papa from 'papaparse';
 import Med from './Med'
+import { useNavigate } from "react-router-dom";
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 const MovieData = () => {
+  const navigate = useNavigate();
   const { pro } = useContext(UserContext);
   const [data, setData] = useState({});
   const [data1, setData1] = useState([]);
@@ -85,28 +87,26 @@ const MovieData = () => {
             <div className="half-spinner"></div>
           </div>
         
-        ): (
-        <div className='MainMedi'>
-            {filteredArray.map((data) => {
-              if (true) {
-                return(
-                  <div key={data.id}>
+        ): ((user==="")?(<div>Please Sign in</div>):(
+          <div className='MainMedi'>
+              {filteredArray.map((data) => {
+                if (true) {
+                  return(
+                    <div key={data.id}>
+                      
                     
-                  
-          <Med p = {data} q = {filteredArray}/>
-          <Med p = {data} q = {filteredArray}/>
-          <Med p = {data} q = {filteredArray}/>
-          <Med p = {data} q = {filteredArray}/>
-                  </div>
-                  
-            )
-              }
-              
+            <Med p = {data} q = {filteredArray}/>
             
-            })}
-            </div>
-          
-      )}
+                    </div>
+                    
+              )
+                }
+                
+              
+              })}
+              </div>
+            
+        ))}
       </div>  
     )
   }
