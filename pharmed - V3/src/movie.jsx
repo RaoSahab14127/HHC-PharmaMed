@@ -70,16 +70,20 @@ const MovieData = () => {
   );
   const final_array  =[] 
   if(pro.length === 0){
+   
   for(var i = 0; i<filteredArray.length; i++){
     let hdata = {...filteredArray[i], Amounti : filteredUser[i].Amount, Durationi : filteredUser[i].Duration}
     final_array.push(hdata)
   } 
-  filteredArray = final_array
+  if(final_array.length!==0){
+  filteredArray = final_array}
+  else{
+    filteredArray = [{id: 1, name: "No Med"}]
+
+  }
 
 }
-  else{
-    filteredArray = pro
-  }
+console.log(filteredArray)
     return (
       <div>
        
@@ -90,10 +94,10 @@ const MovieData = () => {
             <div className="half-spinner"></div>
           </div>
         
-        ): ((shownomed===false)?(<>{alert("SEr")}</>):((user==="")?(<div>Please Sign in to see Medicines</div>):(
+        ): (((user==="")?(<div>Please Sign in to see Medicines</div>):(
           <div className='MainMedi'>
               {filteredArray.map((data) => {
-                if (true) {
+                if (filteredArray[0].name!=="No Med") {
                   return(
                     <div key={data.id}>
                       
@@ -103,6 +107,13 @@ const MovieData = () => {
                     </div>
                     
               )
+                }
+                else{
+                  return(
+                    <div key={data.id}>
+                      No, Medicine recommended by our doctors
+            
+                    </div>)
                 }
                 
               
