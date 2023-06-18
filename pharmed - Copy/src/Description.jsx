@@ -67,7 +67,7 @@ function Description() {
             <div className='Des_Value'>
                 <div className='Des_MainContent'>
                     <div className='Des_MainContent1'>
-                        <div>{des.name}</div>
+                        <div className="MedHed">{des.name}</div>
                         <div>{des?.meta_data[3]?.value}</div>
                         <div>{des.sale_price}</div>
                         <div>{des.id}</div>
@@ -76,8 +76,8 @@ function Description() {
                     <div className='Des_MainContent2'>
                         <div>Availability: {des.stock_status}</div>
                         <div>{des?.categories[0]?.name}</div>
-                        <div className='Des_MainContentCounter'><button onClick={increment}>+</button><div>{dosePurchase.quantity}</div><button onClick={decrement}>-</button></div>
-<div><button onClick={buyfunc}>Buy Now</button></div>
+                        <div className='Des_MainContentCounter'><button className="buttondesp" onClick={increment}>+</button><div>{dosePurchase.quantity}</div><button className="buttondesp" onClick={decrement}>-</button></div>
+{(des.stock_status==="instock")?(<div className="buttondes"><button onClick={buyfunc}>Buy Now</button></div>):("")}
 {err && <p className="error">{err}</p>}
                     </div>
                     
@@ -85,7 +85,7 @@ function Description() {
                 <div className='Des_Atp'>{des?.meta_data[9]?.value}</div>
                 <div className='Des_Ind'>{des?.meta_data[13]?.value}</div>
             </div>
-            <div className='Des_Pic'> <img height={"100%"} width={"100%"} src={(des.images.length!==0)?(des.images[0].src):(des.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/Product-1-280x280.png":(des.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/product-3-280x280.png":"https://genmed.pk/wp-content/uploads/2020/01/topical-280x280.png"} alt={"IMAGE"}/></div>
+            <div className='Des_Pic'> <img  src={(des.images.length!==0)?(des.images[0].src):(des.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/Product-1-280x280.png":(des.meta_data[5].value === "Tablet")?"https://genmed.pk/wp-content/uploads/2019/09/product-3-280x280.png":"https://genmed.pk/wp-content/uploads/2020/01/topical-280x280.png"} alt={"IMAGE"}/></div>
 
         </div>
     </div>

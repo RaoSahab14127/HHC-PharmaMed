@@ -77,7 +77,7 @@ function Login() {
             {errorMessage && <p className="error">{errorMessage}</p>}
             </div>
             <div className="Login_Bottom">
-                Dont login click here to register now <a href='#'>Register Now</a>
+                Dont login click here to register now <a href='https://human-healthcare.com/register-now/' target="_blank">Register Now</a>
             </div>
         </div>
 

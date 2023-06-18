@@ -1,25 +1,29 @@
+
 .Des_Main{
-    border: 1px solid black;
-    height: 100%;
-    width: 80vw;
+    font-size: medium; 
+    height: 50vh;
+    width: 95vw;
     display: flex;
-    
+    background-color: rgb(242, 242, 247);
     align-items: center;
     flex-direction: row;
+    border: 2px solid #A048A7 ;
+    border-radius: 10px;
+    padding: 5px;
     
 }
 .Des_Value{
-    border: 1px solid black;
+    
     height: 100%;
     width: 70%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;;
     flex-direction: row;
 flex-direction: column;
 }
 .Des_Pic{
-    border: 1px solid black;
+   
     height: 100%;
     width: 30%;
     display: flex;
@@ -28,8 +32,8 @@ flex-direction: column;
     flex-direction: row;
 }
 .Des_MainContent{
-border: 1px solid black;
-    height: 100%;
+    
+    height: 50%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -37,30 +41,65 @@ border: 1px solid black;
 }
 .Des_MainContent1{
 height: 100%;
-    width: 100%;
+    width: 60%;
     display: flex;
     align-items: center;
     flex-direction: column;
-border: 1px solid red;
-justify-content: center;
+    justify-content: center;
 
+}
+.MedHed{
+    font-size: x-large;
 }
 .Des_MainContent2{
 height: 100%;
-    width: 100%;
+    width: 40%;
 display: flex;
     align-items: center;
     flex-direction: column;
-border: 1px solid red;
+
 justify-content: center;
 
 }
 .Des_MainContentCounter{
 display: flex;
     align-items: center;
+    justify-content: center;
 
 }
 .Des_Pic>img{
     height: 50%;
     width: 50%;
+}
+
+.Des_Atp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.buttondes>button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    background-color: #A048A7;
+    color: white;
+    border-radius: 10px;
+    width: 130px;
+    height: 40px;
+}
+
+.buttondesp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    background-color: #A048A7;
+    color: white;
+    border-radius: 10px;
+    width: 50px;
+    height: 40px;
 }

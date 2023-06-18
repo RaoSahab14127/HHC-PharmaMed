@@ -23,7 +23,7 @@ function Med(props) {
         <div className='HomeMed_MidData'>
           <div>{props.p.name}</div>
           <div>{props.p.price}</div>
-          <div><button onClick={()=>gotodes(props.p,props.q )}>BuyNow</button></div>
+          <div className='buttonby'><button  onClick={()=>gotodes(props.p,props.q )}>BuyNow</button></div>
         </div>
       </div>
   )
