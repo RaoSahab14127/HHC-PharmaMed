@@ -1,0 +1,20 @@
+.Des_Main1{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.Des_MainDes{
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+
+    
+}

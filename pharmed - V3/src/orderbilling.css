@@ -1,0 +1,476 @@
+
+.ob_Main1{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+ 
+}
+.ob_Mainob{
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #ECECEC;
+    overflow: scroll;
+
+
+
+    
+}
+.OS1{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.OrderSlip{
+    border: 1px solid #A048A7;
+    height: 50%;
+    width: 50%;
+    min-width: 300px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: scroll;
+}
+#OSPRO{
+    display: flex;
+    flex-direction: column;
+}
+.ob1{
+    height: 90%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin:10px;
+    border: #A048A7 2px solid;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(242, 242, 247);
+
+}
+.ob2{
+    height: 50%;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(242, 242, 247);
+    border: 2px solid #A048A7 ;
+    border-radius: 10px;
+
+}
+
+
+.cart_Main2button>button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    background-color: #A048A7;
+    color: white;
+    border-radius: 10px;
+    width: 130px;
+    height: 40px;
+    
+
+}
+.cart_Main2Heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-size: xx-large;
+
+}
+.ob2>div{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    justify-content: space-between;
+
+}
+.ob1>label{
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+}
+.ob1>label>input{
+    width: 100%;
+    background-color: #A048A7;
+    border-radius: 5px;
+}
+.ob1>label>select{
+    width: 100%;
+    background-color: #A048A7;
+    border-radius: 5px;
+}
+.ob1H{
+    width: 100%;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartmaterial>div{
+    font-size: larger;
+}
+@media only screen and (max-width: 1270px) {
+    
+.ob_Main1{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+ 
+}
+.ob_Mainob{
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    display: flex;
+
+    justify-content: space-evenly;
+    background-color: #ECECEC;
+    overflow: scroll;
+
+
+
+    
+}
+.ob1{
+    height: 90%;
+    width: 50%;
+    min-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin:10px;
+    border: #A048A7 2px solid;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(242, 242, 247);
+
+}
+.ob2{
+    height: 50%;
+    width: 40%;
+    min-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(242, 242, 247);
+    border: 2px solid #A048A7 ;
+    border-radius: 10px;
+    margin-bottom: 5px;
+
+}
+
+
+.cart_Main2button>button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    background-color: #A048A7;
+    color: white;
+    border-radius: 10px;
+    width: 130px;
+    height: 40px;
+    
+
+}
+.cart_Main2Heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-size: xx-large;
+
+}
+.ob2>div{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    justify-content: space-between;
+
+}
+.ob1>label{
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+}
+.ob1H{
+    width: 100%;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartmaterial>div{
+    font-size: larger;
+}
+}
+@media only screen and (max-width: 900px) {
+    
+    .ob_Main1{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+     
+    }
+    .ob_Mainob{
+        height: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #ECECEC;
+        overflow: scroll;
+    
+    
+    
+        
+    }
+    .ob1{
+        height: 90%;
+        width: 50%;
+        min-width: 80%;
+        min-height: 800px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin:10px;
+        border: #A048A7 2px solid;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgb(242, 242, 247);
+    
+    }
+    .ob2{
+        height: 50%;
+        width: 40%;
+        min-height: 300px;
+        min-width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(242, 242, 247);
+        border: 2px solid #A048A7 ;
+        border-radius: 10px;
+    
+    }
+    
+    
+    .cart_Main2button>button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        background-color: #A048A7;
+        color: white;
+        border-radius: 10px;
+        width: 130px;
+        height: 40px;
+        
+    
+    }
+    .cart_Main2Heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        font-size: xx-large;
+    
+    }
+    .ob2>div{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        margin: 5px;
+        justify-content: space-between;
+    
+    }
+    .ob1>label{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: medium;
+    }
+    .ob1H{
+        width: 100%;
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cartmaterial>div{
+        font-size: medium;
+    }
+    }
+
+    @media only screen and (max-width: 500px) {
+    
+        .ob_Main1{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+         
+        }
+        .ob_Mainob{
+            height: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #ECECEC;
+            overflow: scroll;
+        
+        
+        
+            
+        }
+        .ob1{
+            height: 90%;
+            width: 50%;
+            min-width: 80%;
+            min-height: 800px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin:10px;
+            border: #A048A7 2px solid;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgb(242, 242, 247);
+        
+        }
+        .ob2{
+            height: 50%;
+            width: 40%;
+            min-height: 300px;
+            min-width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(242, 242, 247);
+            border: 2px solid #A048A7 ;
+            border-radius: 10px;
+        
+        }
+        
+        
+        .cart_Main2button>button{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            background-color: #A048A7;
+            color: white;
+            border-radius: 10px;
+            width: 130px;
+            height: 40px;
+            
+        
+        }
+        .cart_Main2Heading{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            font-size: medium;
+        
+        }
+        .ob2>div{
+            width: 90%;
+            display: flex;
+            align-items: center;
+            margin: 5px;
+            justify-content: space-between;
+        
+        }
+        .ob1>label{
+        
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: medium;
+        }
+        .ob1H{
+            width: 100%;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cartmaterial>div{
+            font-size: medium;
+        }
+        .ob1H{
+            font-size: large
+        }
+        }
+
