@@ -23,6 +23,7 @@ const MovieData = () => {
     if(pro.length === 0){
     fetchData()}
 
+
     
     
   }, []);
@@ -58,9 +59,9 @@ const MovieData = () => {
   };
     
     
-    const movies = Array.from(data);
-    
-    const { setUser, user } = useContext(UserContext);
+    let movies = Array.from(data);
+
+  const { setUser, user } = useContext(UserContext);
     const filteredUser = movies.filter((item1) => item1.EMRNumber === user)
     if(filteredUser.length!==0){
       shownomed = true;
@@ -83,11 +84,14 @@ const MovieData = () => {
   }
 
 }
+else{
+  filteredArray = pro
+}
 console.log(filteredArray)
     return (
       <div>
-       
-      {((filteredArray.length ===0 || movies.length === 0 )&& user!=="" )? (
+    
+      {((movies.length === 0 && pro.length ===0 )&& user!=="" )? (
         
           <div className="spinner">
             <div className='spinnerspan'>Less than 2 Min</div>
