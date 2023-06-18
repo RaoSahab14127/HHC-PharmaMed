@@ -75,7 +75,7 @@ const MovieData = () => {
     let hdata = {...filteredArray[i], Amounti : filteredUser[i].Amount, Durationi : filteredUser[i].Duration}
     final_array.push(hdata)
   } 
-  if(final_array.length!==0){
+  if(filteredArray.length!==0){
   filteredArray = final_array}
   else{
     filteredArray = [{id: 1, name: "No Med"}]
@@ -87,7 +87,7 @@ console.log(filteredArray)
     return (
       <div>
        
-      {(filteredArray.length ===0 && user!=="" )? (
+      {((filteredArray.length ===0 || movies.length === 0 )&& user!=="" )? (
         
           <div className="spinner">
             <div className='spinnerspan'>Less than 2 Min</div>
