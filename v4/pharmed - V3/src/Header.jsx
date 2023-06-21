@@ -6,6 +6,7 @@ import UserContext from './userContext'
 import { useNavigate } from "react-router-dom";
 function Header() {
   const navigate = useNavigate();
+  const { setLoader } = useContext(UserContext);
   const { setUser, user } = useContext(UserContext);
   const {setSign, sign} =  useContext(UserContext);
   const {setDes, des} =  useContext(UserContext);
@@ -35,7 +36,7 @@ function Header() {
         {user ? (
           <>
           <div>  
-              <button  onClick={()=>{setUser(""); setSign(""); setCart([]); setDes({}); setPro([]); navigate("/Signin")}}>
+              <button  onClick={()=>{setUser("");setLoader(false); setSign(""); setCart([]); setDes({}); setPro([]); navigate("/Signin")}}>
                 Logout
               </button>
               </div>
