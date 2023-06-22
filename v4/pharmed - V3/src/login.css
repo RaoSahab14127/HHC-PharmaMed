@@ -257,7 +257,7 @@ justify-content: center;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         display: flex;
         font: 900;
-        font-size:large;
+        font-size:medium;
         flex-direction: column;
         color: #A048A7;
         font-style:oblique;

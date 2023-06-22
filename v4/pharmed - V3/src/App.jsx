@@ -10,6 +10,7 @@ import OrderBilling from "./orderbilling";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   const [user, setUser] = useState("");
+  const [userData, setUserData] = useState({Name: ""});
   const [sign, setSign] = useState("");
   const [loader, setLoader] = useState(false);
   const [des, setDes] = useState({});
@@ -18,7 +19,7 @@ function App() {
   const [total, setTotal] = useState(0);
  
   return (
-    <UserContext.Provider value={{ user, setUser , sign, setSign , des, setDes,  cart, setCart,pro, setPro, total, setTotal, loader, setLoader}}>
+    <UserContext.Provider value={{ user, setUser , sign, setSign ,userData, setUserData, des, setDes,  cart, setCart,pro, setPro, total, setTotal, loader, setLoader}}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomeMed />} />

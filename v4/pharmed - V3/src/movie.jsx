@@ -35,29 +35,25 @@ useEffect(() => {
   
 }, []);
 movies = Array.from(data)
-filteredUser = movies.filter((item1) => item1.EMRNumber === user.Username);
+filteredUser = movies.filter((item1) => item1.EMRNumber === user);
 useEffect(() => {
   
   
   fetchData();
-
   
 }, [data]);
-
 const fetchData = async () => {
   let allpro = []
   let i = 0
   try {
     while(i<(filteredUser.length)){
     const response = await WooCommerce.get(`products/${filteredUser[i].Med}`);
-
     if((response.data).length===0){
      
       break;
     }
     allpro = allpro.concat(response.data)      
     i++;
-
     }
     if(allpro.length!==0){    setData1(allpro); setLoader(true);}
    
@@ -73,65 +69,48 @@ for(var i = 0; i<filteredArray.length; i++){
   let hdata = {...filteredArray[i], Amounti : filteredUser[i].Amount, Durationi : filteredUser[i].Duration}
   final_array.push(hdata)
 } 
-
 if(filteredArray.length!==0){
 filteredArray = final_array}
 else{
   filteredArray = [{id: 1, name: "No Med"}]
-  
-  
-
-}
-
-}
+}}
 else{
-filteredArray = pro
-}
-    return (
-      <div>
-    
-      {(( data1.length===0 && pro.length ===0 )&& user.Username!=="" )? (
-        
-          ((movies.filter((item1) => item1.EMRNumber === user.Username)).length === 0 && movies.length!==0
-           && loader=== false)?(
-            "No Medicine Recommended"
-          ):(<div className="spinner">
-          <div className='spinnerspan'>Loading Data..</div>
-          <div className="half-spinner"></div>
-        </div>)
-        
-        ): (((user.Username==="")?(<div>Please Sign in to see Medicines</div>):(
-          <div className='MainMedi'>
-              {filteredArray.map((data) => {
-               
-                
-                  return(
-                    <div key={data.id}>
-                      <Med p = {data} q = {filteredArray}/>
-            
-                    </div>
+  filteredArray = pro
+  }
+      return (
+        <div>
+      
+        {(( data1.length===0 && pro.length ===0 )&& user!=="" )? (
+          
+            ((movies.filter((item1) => item1.EMRNumber === user)).length === 0 && movies.length!==0
+             && loader=== false)?(
+              "No Medicine Recommended"
+            ):(<div className="spinner">
+            <div className='spinnerspan'>Loading Data..</div>
+            <div className="half-spinner"></div>
+          </div>)
+          
+          ): (((user==="")?(<div>Please Sign in to see Medicines</div>):(
+            <div className='MainMedi'>
+                {filteredArray.map((data) => {
+                 
+                  
+                    return(
+                      <div key={data.id}>
+                        <Med p = {data} q = {filteredArray}/>
+              
+                      </div>
+                      
+                )
                     
-              )
                   
                 
+                })}
+                </div>
               
-              })}
-              </div>
-            
-        )))}
-      </div>  
-    )
-  }
-export default MovieData;
-
-
-
-
-
-
-
+          )))}
+        </div>  
+      )
+    }
+  export default MovieData;
   
-  
-
-
-
