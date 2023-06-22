@@ -2,6 +2,21 @@
 *{
     text-decoration: none;
 }
+
+.LoginQoute {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    font: 900;
+    font-size:x-large;
+    flex-direction: column;
+    color: #ffffff;
+    font-style:oblique;
+    width: 100%;
+    
+
+align-items: center;
+justify-content: center;    
+}
 .Login_Main{
     background-color: #ECECEC;
     height: 100vh;
@@ -9,7 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
 .Login_MainDiv{
     background-color: #A048A7;
     height: 60%;
@@ -237,5 +252,18 @@
         border-radius: 10px;
         color:rgb(255, 255, 255);
     
+    }
+    .LoginQoute {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: flex;
+        font: 900;
+        font-size:large;
+        flex-direction: column;
+        color: #A048A7;
+        font-style:oblique;
+        width: 100%;
+    
+    align-items: center;
+    justify-content: center;    background-color:rgb(238, 238, 238);;
     }
   }

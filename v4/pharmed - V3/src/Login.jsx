@@ -9,7 +9,7 @@ import UserContext from './userContext'
 function Login() {
   const { setUser, user } = useContext(UserContext);
     const navigate = useNavigate();
-  
+    const [userr, setUserr] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -25,10 +25,11 @@ function Login() {
       // Convert Excel data to JSON or perform parsing if necessary
       const excelData = await convertExcelData(response.data);
       const foundUser = excelData.find(
-        (user1) => user1.Username === user && user1.Password == password
+        (user1) => user1.Username === userr && user1.Password == password
       );
-
+  
       if (foundUser) {
+        setUser(foundUser)
         // Authentication successful, perform desired actions
         console.log('Authentication successful!');
         navigate("/")
@@ -54,12 +55,15 @@ function Login() {
   return (
     <div className='Login_Main'>
         <div className="Login_MainDiv">
-            <div  className="Login_Logo"> <img src="https://human-healthcare.com/wp-content/uploads/2023/02/HH-logo-Option-2-e1678900350865.png" alt="LOGO" /></div>
+            <div  className="Login_Logo"> <img src="https://human-healthcare.com/wp-content/uploads/2023/02/HH-logo-Option-2-e1678900350865.png" alt="LOGO" />
+            <div className="LoginQoute">"Your health, our priority"</div>
+            <div className="LoginQoute">Access your care journey with confidence</div></div>
+            
             <div className="Login_Top">
             
             <form onSubmit={handleFormSubmit}>
                 <div className="Login_Username">
-                    <input type="text" placeholder='EMR Number' id="username" value={user} onChange={(e) => setUser(e.target.value)} />
+                    <input type="text" placeholder='EMR Number' id="username" value={userr} onChange={(e) => setUserr(e.target.value)} />
                 </div>
                 <div className="Login_Password">
                 <input

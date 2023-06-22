@@ -35,7 +35,7 @@ useEffect(() => {
   
 }, []);
 movies = Array.from(data)
-filteredUser = movies.filter((item1) => item1.EMRNumber === user);
+filteredUser = movies.filter((item1) => item1.EMRNumber === user.Username);
 useEffect(() => {
   
   
@@ -90,9 +90,9 @@ filteredArray = pro
     return (
       <div>
     
-      {(( data1.length===0 && pro.length ===0 )&& user!=="" )? (
+      {(( data1.length===0 && pro.length ===0 )&& user.Username!=="" )? (
         
-          ((movies.filter((item1) => item1.EMRNumber === user)).length === 0 && movies.length!==0
+          ((movies.filter((item1) => item1.EMRNumber === user.Username)).length === 0 && movies.length!==0
            && loader=== false)?(
             "No Medicine Recommended"
           ):(<div className="spinner">
@@ -100,7 +100,7 @@ filteredArray = pro
           <div className="half-spinner"></div>
         </div>)
         
-        ): (((user==="")?(<div>Please Sign in to see Medicines</div>):(
+        ): (((user.Username==="")?(<div>Please Sign in to see Medicines</div>):(
           <div className='MainMedi'>
               {filteredArray.map((data) => {
                

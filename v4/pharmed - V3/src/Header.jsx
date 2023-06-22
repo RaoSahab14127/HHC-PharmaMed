@@ -41,7 +41,7 @@ function Header() {
               </button>
               </div>
               <div className="user">
-                {user}
+                {user.Name}
               </div>
               </>
           ) : (
