@@ -18,7 +18,7 @@ function Header() {
         <div className='Top_First'><img height={"100%"} width={"100%"} onClick={()=>navigate("/")} src="https://human-healthcare.com/wp-content/uploads/2023/02/HH-logo-Option-2-e1678900350865.png" alt="sdfasd" /></div>
         <div className='Top_SecondMain'>
         <div className='Top_Second'>Human Health Care Pharmacy</div>
-        <div className='Top_Second2'>Hy, {userData?.Name} welcome to portal</div>
+        <div className='Top_Second2'>Greetings, {userData?.Name} welcome to portal</div>
         </div>
         <input type="checkbox" name="" id="click" />
         <div className="cross">

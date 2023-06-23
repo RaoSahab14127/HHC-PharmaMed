@@ -52,7 +52,7 @@ function Login() {
         <div className="Login_MainDiv">
         <div  className="Login_Logo"> <img src="https://human-healthcare.com/wp-content/uploads/2023/02/HH-logo-Option-2-e1678900350865.png" alt="LOGO" />
             <div className="LoginQoute">"Your health, our priority"</div>
-            <div className="LoginQoute">Access your care journey with confidence</div></div>
+            <div className="LoginQoute">Access your Personalised VIP Healthcare Plan</div></div>
             <div className="Login_Top">
             
             <form onSubmit={handleFormSubmit}>
