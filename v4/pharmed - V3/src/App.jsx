@@ -8,6 +8,7 @@ import "./App.css";
 import UserContext from "./userContext";
 import OrderBilling from "./orderbilling";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScreenLab from "./ScreenLab";
 function App() {
   const [user, setUser] = useState("");
   const [userData, setUserData] = useState({Name: ""});
@@ -27,6 +28,7 @@ function App() {
           <Route path="/Cart" element={<ScreenCart />} />
           <Route path="/Description" element={<ScreenDes />} />
           <Route path="/orderbilling" element={<OrderBilling />} />
+          <Route path="/Labfile" element={<ScreenLab/>} />
           <Route path="/*" element={ <div>Page 404 Error</div>} />
         </Routes>
       </BrowserRouter>
