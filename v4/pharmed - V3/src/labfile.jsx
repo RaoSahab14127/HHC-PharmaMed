@@ -23,7 +23,7 @@ function Labfile() {
     filteredUser = labArray.filter((item1) => item1.EMR === user);
   return (
     <div className='labReportsList'>
-      <div className='LabListHead'><div><div>EMR Number</div>
+      <div className='LabListHead'><div>
       <div>Name of Report</div>
       <div>Date</div>
       <div>Full view</div>
@@ -35,7 +35,6 @@ function Labfile() {
                   
                  return(
                    <div key={data.number}>
-                    {console.log(data)}
                     <Lab p = {data}/>
                    </div>
                    
@@ -44,7 +43,7 @@ function Labfile() {
                
              
              })}
-                      </div>
+      </div>
   )
 }
 

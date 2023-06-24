@@ -1,23 +1,67 @@
 .labReportsList{
-    width: 100%;
-    display: flex;
     height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    flex-direction: row;
+
+    
+
+
+    
 }
 .labReportsList>div{
-    width: 90%;
-    height: 70px;
+    height: 10%;
+    width: 100%;
+
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+
 
 }
-.labReportsList>div>div{
+
+.LabListHead{
+    font-size: x-large;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border:  1px solid #A048A7;
-    border-radius: 10px;
+    justify-content: center;
+    height: 10%;
+    border-bottom: 1px solid #AAA;
+}
+
+.LabListHead>div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 100%;
+    min-width: 100%;
+
+
+}
+.LabListHead>div>div{
+    max-width: 20%;
+    min-width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+@media only screen and (max-width: 600px) {
+    .LabListHead{
+        font-size: small;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10%;
+        border-bottom: 1px solid #AAA;
+    }
 
 }
