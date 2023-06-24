@@ -1,0 +1,15 @@
+.labdiv{
+    min-height:900px;
+   min-width: 900px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.labdiv>img{
+    height:800px;
+    width:800px ;
+}
