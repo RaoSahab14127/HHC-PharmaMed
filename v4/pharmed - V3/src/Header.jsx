@@ -44,6 +44,11 @@ function Header() {
               <div className="user">
                 {user}
               </div>
+              <div className="user">
+              <button  onClick={()=>navigate("/Labfile")}>
+                Reports
+              </button>
+              </div>
               </>
           ) : (
             <div className="signupbtn">
