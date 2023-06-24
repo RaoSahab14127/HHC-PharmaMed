@@ -22,7 +22,14 @@ function Labfile() {
     labArray = Array.from(labdata)
     filteredUser = labArray.filter((item1) => item1.EMR === user);
   return (
-    <div>
+    <div className='labReportsList'>
+      <div className='LabListHead'><div><div>EMR Number</div>
+      <div>Name of Report</div>
+      <div>Date</div>
+      <div>Full view</div>
+      </div>
+      </div>
+      
       {filteredUser.map((data) => {
                  
                   
@@ -41,8 +48,4 @@ function Labfile() {
   )
 }
 
-export default Labfile
-
-
-
-
+export default Labfile;
