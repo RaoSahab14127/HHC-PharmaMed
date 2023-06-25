@@ -9,6 +9,7 @@ import UserContext from "./userContext";
 import OrderBilling from "./orderbilling";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScreenLab from "./ScreenLab";
+import ScreenLAbDes from "./ScreenLAbDes";
 function App() {
   const [user, setUser] = useState("");
   const [userData, setUserData] = useState({Name: ""});
@@ -31,6 +32,7 @@ function App() {
           <Route path="/Description" element={<ScreenDes />} />
           <Route path="/orderbilling" element={<OrderBilling />} />
           <Route path="/Labfile" element={<ScreenLab/>} />
+          <Route path="/LabfileDes" element={<ScreenLAbDes/>} />
           <Route path="/*" element={ <div>Page 404 Error</div>} />
         </Routes>
       </BrowserRouter>

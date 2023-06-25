@@ -1,0 +1,20 @@
+.LabDes_Main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.LabDesMain1{
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    min-height: 400px;
+    
+}

@@ -1,0 +1,27 @@
+.labdespgMain{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.labdespgMain_Name{
+    height: 10%;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.labdespgMain_pic{
+    height: 90%;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.labdespgMain_pic>img{
+    height: 98%;
+    width: 100%;
+
+}

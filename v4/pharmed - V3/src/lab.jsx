@@ -6,16 +6,16 @@ function Lab(props) {
 
   const navigate = useNavigate();
   const { setDes, des } = useContext(UserContext);
-  let seeFullReport=(x, y)=>{
+  let seeFullReport=(x)=>{
 
     setDes(x);
-    navigate("/")
+    navigate("/LabfileDes")
   }
   return (
     <div className='lab'>
       <div>{props.p.NameOfReport}</div>
       <div>{props.p.Date}</div>
-      <div className='labbutton'><button  onClick={()=>seeFullReport(props.p)}>Show Report</button></div>
+      <div className='labbutton'><button  onClick={()=>seeFullReport(props.p)}>Show Image</button></div>
   </div>
   )
 }
