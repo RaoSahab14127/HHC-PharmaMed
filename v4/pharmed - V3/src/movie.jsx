@@ -9,7 +9,7 @@ import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 const MovieData = () => {
 let movies = [];
 let  donefetch =false;
-const { pro } = useContext(UserContext);
+const { pro, setPro } = useContext(UserContext);
 const { user } = useContext(UserContext);
 const { loader , setLoader} = useContext(UserContext);
 const [data, setData] = useState({});
@@ -77,6 +77,9 @@ else{
 else{
   filteredArray = pro
   }
+if(pro.length===0 && filteredArray.length!==0 && filteredArray[0].name!=="No Med"){
+  setPro(filteredArray)
+}
       return (
         <div>
       
