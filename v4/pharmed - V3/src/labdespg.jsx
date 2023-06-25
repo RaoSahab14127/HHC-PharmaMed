@@ -1,12 +1,14 @@
-import React from 'react'
+import React ,{useContext} from 'react'
 import "./labdespg.css"
-function labdespg() {
+import UserContext from './userContext';
+function Labdespg() {
+    const { setDes, des } = useContext(UserContext);
   return (
     <div className='labdespgMain'>
-        <div className='labdespgMain_pic'><img src="https://th.bing.com/th/id/OIP.4YzR2InA8-OpplGPYnDHaQHaHa?pid=ImgDet&rs=1" alt="" /></div>
-        <div className='labdespgMain_Name'>Heart Report</div>
+        <div className='labdespgMain_pic'><img src={`https://drive.google.com/uc?export=view&id=${des.Source}`} alt="Lab report Image" /></div>
+        <div className='labdespgMain_Name'>{des.NameOfReport}</div>
     </div>
   )
 }
 
-export default labdespg
+export default Labdespg

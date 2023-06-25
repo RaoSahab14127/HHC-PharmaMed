@@ -13,12 +13,13 @@ function Header() {
   const {setDes, des} =  useContext(UserContext);
   const {setPro, pro} =  useContext(UserContext);
   const {setCart, cart} =  useContext(UserContext);
+  const {  setRep, rep } = useContext(UserContext);
   return (
     <div className='HomeMed_Top'>
         <div className='Top_First'><img height={"100%"} width={"100%"} onClick={()=>navigate("/")} src="https://human-healthcare.com/wp-content/uploads/2023/02/HH-logo-Option-2-e1678900350865.png" alt="sdfasd" /></div>
         <div className='Top_SecondMain'>
         <div className='Top_Second'>Human Health Care</div>
-        <div className='Top_Second2'>Greetings, {userData?.Name} welcome to portal</div>
+        <div className='Top_Second2'><div>Greetings, {userData?.Name}</div> <div>welcome to portal</div></div>
         </div>
         <input type="checkbox" name="" id="click" />
         <div className="cross">
@@ -37,7 +38,7 @@ function Header() {
         {user ? (
           <>
           <div>  
-              <button  onClick={()=>{setUser("");setLoader(false); setSign(""); setCart([]); setDes({}); setPro([]); navigate("/Signin")}}>
+              <button  onClick={()=>{setUser("");setLoader(false); setSign(""); setCart([]); setDes({}); setPro([]);setRep([]); navigate("/Signin")}}>
                 Logout
               </button>
               </div>
