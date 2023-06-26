@@ -43,7 +43,7 @@ function Header() {
               </button>
               </div>
               <div className="user">
-              <button  onClick={()=>navigate("/Labfile")}>
+              <button  onClick={()=>{setLoader(true);     navigate("/Labfile")}}>
                 Reports
               </button>
               </div>
