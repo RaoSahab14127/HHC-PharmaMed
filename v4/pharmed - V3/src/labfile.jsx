@@ -41,13 +41,13 @@ console.log(filteredUser)
 
   return (
     <>
-    {(labArray.length===0 && rep.length ===0 )?(
+    {(labArray.length===0  && rep.length ===0 )?(
       <div className="spinner">
             <div className='spinnerspan'>Loading Data..</div>
             <div className="half-spinner"></div>
           </div>
 
-    ):((filteredUser.length==0)?("No Reports"):(
+    ):((filteredUser.length==0)?(""):(
       <div className='labReportsList'>
         <div className='LabListHead'><div>
         <div>Name of Report</div>
