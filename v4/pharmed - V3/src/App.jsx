@@ -7,7 +7,7 @@ import Login from "./Login";
 import "./App.css";
 import UserContext from "./userContext";
 import OrderBilling from "./orderbilling";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import ScreenLab from "./ScreenLab";
 import ScreenLAbDes from "./ScreenLAbDes";
 function App() {
@@ -26,7 +26,13 @@ function App() {
     <UserContext.Provider value={{ user, setUser , sign, setSign ,rep, setRep,userData, setUserData, des, setDes,  cart, setCart,pro, setPro, total, setTotal, loader, setLoader}}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomeMed />} />
+        <Route
+          path="/"
+          element={user!==""
+            ? <HomeMed  />
+            : <Navigate to="/Signin" replace />
+          }
+        />
           <Route path="/Signin" element={<Login />} />
           <Route path="/Cart" element={<ScreenCart />} />
           <Route path="/Description" element={<ScreenDes />} />
@@ -41,3 +47,8 @@ function App() {
   );
 }
 export default App;
+
+
+
+
+        // <Route path="/" element={<HomeMed />} />
