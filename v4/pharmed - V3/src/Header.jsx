@@ -14,6 +14,7 @@ function Header() {
   const {setPro, pro} =  useContext(UserContext);
   const {setCart, cart} =  useContext(UserContext);
   const {  setRep, rep } = useContext(UserContext);
+  const { ancl, setAncl } = useContext(UserContext);
   return (
     <div className='HomeMed_Top'>
         <div className='Top_First'><img height={"100%"} width={"100%"} onClick={()=>navigate("/")} src="https://human-healthcare.com/wp-content/uploads/2023/02/HH-logo-Option-2-e1678900350865.png" alt="sdfasd" /></div>
@@ -38,7 +39,7 @@ function Header() {
         {user ? (
           <>
           <div>  
-              <button  onClick={()=>{setUser("");setLoader(false); setSign(""); setCart([]); setDes({}); setPro([]);setRep([]); navigate("/Signin")}}>
+              <button  onClick={()=>{setUser("");setLoader(false); setSign(""); setCart([]); setDes({}); setPro([]);setAncl([]);setRep([]); navigate("/Signin");}}>
                 Logout
               </button>
               </div>

@@ -21,10 +21,11 @@ function App() {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
   const [rep, setRep] = useState([]);
+  const [ancl, setAncl] = useState([]);
 
  
   return (
-    <UserContext.Provider value={{ user, setUser , sign, setSign ,rep, setRep,userData, setUserData, des, setDes,  cart, setCart,pro, setPro, total, setTotal, loader, setLoader}}>
+    <UserContext.Provider value={{ user, setUser , sign, setSign ,rep, setRep,userData, setUserData, des, setDes,  cart, setCart,pro, setPro, total, setTotal, loader, setLoader, ancl, setAncl}}>
       <BrowserRouter>
         <Routes>
         <Route
