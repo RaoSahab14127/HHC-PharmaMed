@@ -1,6 +1,6 @@
 import Papa from 'papaparse';
 import React, {useEffect, useState} from 'react'
-
+import "./userdata.css"
 function Userdata() {
     let movies = []
     const [data, setData] = useState({});
@@ -21,17 +21,21 @@ function Userdata() {
       // Filter unique values
       const uniqueValues = [...new Set(columnValues)];
   return (
-    <div>
+    <div className='MainList'>
+        <div className='ListHead'>Top Services</div>
         {uniqueValues.map((data) => {
                  
                   
-                 return(
-                   <div key={data}>
+                 return(<>
+                 
+                 
+                 <div className='List' key={data}>
                     <button>
                         {data}
                     </button>
            
                    </div>
+                 </>
                    
              )
                  
