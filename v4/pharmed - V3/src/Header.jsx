@@ -39,7 +39,7 @@ function Header() {
         {user ? (
           <>
           <div>  
-              <button  onClick={()=>{setUser("");setLoader(false); setSign(""); setCart([]); setDes({}); setPro([]);setAncl([]);setRep([]); navigate("/Signin");}}>
+              <button  onClick={()=>{setUser("");setLoader(false); setSign(""); setCart([]); setDes({}); setPro([]);setAncl([]); setRep([]); navigate("/Signin");}}>
                 Logout
               </button>
               </div>
@@ -49,11 +49,15 @@ function Header() {
               </button>
               </div>
               <div className="user">
-              <button  onClick={()=>{setLoader(true);     navigate(`/${user}`)}}>
-                {user}
+              <button  onClick={()=>{setLoader(true);     navigate("/MedSer")}}>
+                MedService
               </button>
               </div>
               
+              <div className="user">
+                {user}
+
+              </div>
               </>
           ) : (
             <div className="signupbtn">

@@ -11,6 +11,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import ScreenLab from "./ScreenLab";
 import ScreenUserData from "./screenUserData"
 import ScreenLAbDes from "./ScreenLAbDes";
+import AncilaryDes from "./ancilaryDes";
 function App() {
   const [user, setUser] = useState("");
   const [userData, setUserData] = useState({Name: ""});
@@ -22,10 +23,11 @@ function App() {
   const [total, setTotal] = useState(0);
   const [rep, setRep] = useState([]);
   const [ancl, setAncl] = useState([]);
+  const [ch, setCh] = useState([]);
 
  
   return (
-    <UserContext.Provider value={{ user, setUser , sign, setSign ,rep, setRep,userData, setUserData, des, setDes,  cart, setCart,pro, setPro, total, setTotal, loader, setLoader, ancl, setAncl}}>
+    <UserContext.Provider value={{ user, setUser , sign, setSign ,rep, setRep,userData, setUserData, des, setDes,  cart, setCart,pro, setPro, total, setTotal, loader, setLoader, ancl, setAncl,ch, setCh}}>
       <BrowserRouter>
         <Routes>
         <Route
@@ -41,7 +43,8 @@ function App() {
           <Route path="/orderbilling" element={<OrderBilling />} />
           <Route path="/Labfile" element={<ScreenLab/>} />
           <Route path="/LabfileDes" element={<ScreenLAbDes/>} />
-          <Route path={`/${user}`} element={<ScreenUserData/>} />
+          <Route path={"/MedSer"} element={<ScreenUserData/>} />
+          <Route path={"/MedSerDes"} element={<AncilaryDes/>} />
           <Route path="/*" element={ <div>Page 404 Error</div>} />
         </Routes>
       </BrowserRouter>
