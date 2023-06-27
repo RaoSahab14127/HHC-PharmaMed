@@ -9,6 +9,7 @@ import UserContext from "./userContext";
 import OrderBilling from "./orderbilling";
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import ScreenLab from "./ScreenLab";
+import ScreenUserData from "./screenUserData"
 import ScreenLAbDes from "./ScreenLAbDes";
 function App() {
   const [user, setUser] = useState("");
@@ -39,6 +40,7 @@ function App() {
           <Route path="/orderbilling" element={<OrderBilling />} />
           <Route path="/Labfile" element={<ScreenLab/>} />
           <Route path="/LabfileDes" element={<ScreenLAbDes/>} />
+          <Route path={`/${user}`} element={<ScreenUserData/>} />
           <Route path="/*" element={ <div>Page 404 Error</div>} />
         </Routes>
       </BrowserRouter>
@@ -47,8 +49,3 @@ function App() {
   );
 }
 export default App;
-
-
-
-
-        // <Route path="/" element={<HomeMed />} />

@@ -48,7 +48,9 @@ function Header() {
               </button>
               </div>
               <div className="user">
+              <button  onClick={()=>{setLoader(true);     navigate(`/${user}`)}}>
                 {user}
+              </button>
               </div>
               
               </>
