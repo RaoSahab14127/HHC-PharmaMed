@@ -15,14 +15,36 @@ function Userdata() {
     useEffect(() => {
         if(ancl.length===0){
           
-          Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vS4Rwuc9sZPmsC-xbnUrvlWIkpHZz668XpxvN9b8sKcMH2yPJUxBNOiVXqV2U1XK03dOVUnlL5KFpV0/pub?gid=0&single=true&output=csv", {
-             download: true,
-             header: true,
-             complete: (results) => {
-               setData(results.data);
-               setLoader(false)
-             },
-           })
+         if(userData.Dis==="central"){
+          Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vS4Rwuc9sZPmsC-xbnUrvlWIkpHZz668XpxvN9b8sKcMH2yPJUxBNOiVXqV2U1XK03dOVUnlL5KFpV0/pub?output=csv", {
+            download: true,
+            header: true,
+            complete: (results) => {
+              setData(results.data);
+              setLoader(false)
+            },
+          })
+         }
+         if(userData.Dis==="east"){
+          Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vRvWrNIYs5bwyeMuK9pEET_yOA-fyqXydFlgaYvFu8oqLAmzY5HmR0nyUuiwerARVWVmej14PW7pxar/pub?output=csv", {
+            download: true,
+            header: true,
+            complete: (results) => {
+              setData(results.data);
+              setLoader(false)
+            },
+          })
+         }
+         if(userData.Dis==="west"){
+          Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vSt-DTLIxzKBl5AfyBPsUNioqpM9Lqf8z3EfcHRvJ1Sa_Euw0fWGrFrngQBqCcuUa34bEQcSaOVz6Ms/pub?output=csv", {
+            download: true,
+            header: true,
+            complete: (results) => {
+              setData(results.data);
+              setLoader(false)
+            },
+          })
+         }
         
         }
         else{
