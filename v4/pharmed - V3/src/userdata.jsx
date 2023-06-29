@@ -10,9 +10,11 @@ function Userdata() {
     const { setLoader, loader } = useContext(UserContext);
     const { ancl, setAncl } = useContext(UserContext);
     const { ach, setCh } = useContext(UserContext);
+    const { setUserData, userData } = useContext(UserContext);
     
     useEffect(() => {
         if(ancl.length===0){
+          
           Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vS4Rwuc9sZPmsC-xbnUrvlWIkpHZz668XpxvN9b8sKcMH2yPJUxBNOiVXqV2U1XK03dOVUnlL5KFpV0/pub?gid=0&single=true&output=csv", {
              download: true,
              header: true,
@@ -31,7 +33,6 @@ function Userdata() {
       }, []);
       movies = Array.from(data)
       const columnValues = movies.map((row) => row['Domain']);
-
       // Filter unique values
       const uniqueValues = [...new Set(columnValues)];
       if(movies.length!==0 && ancl.length===0){
@@ -42,7 +43,6 @@ function Userdata() {
         navigate("/MedSerDes")
         
       }
-
   return (
     <div className='MainList'>
             <>
@@ -51,7 +51,6 @@ function Userdata() {
             <div className='spinnerspan'>Loading Data..</div>
             <div className="half-spinner"></div>
           </div>
-
     ):((uniqueValues.length==0)?(""):(<>
       <div className='ListHead'>Top Services</div>
       {uniqueValues.map((data) => {
@@ -80,13 +79,4 @@ function Userdata() {
     </div>
   )
 }
-
 export default Userdata
-
-
-
-
-
-
-
-
