@@ -73,8 +73,9 @@ function Userdata() {
             <div className='spinnerspan'>Loading Data..</div>
             <div className="half-spinner"></div>
           </div>
-    ):((uniqueValues.length==0)?(""):(<>
-      <div className='ListHead'>Top Services</div>
+    ):((uniqueValues.length==0)?(""):(<div className='mainll'>
+      <div className='ListHead'>Top Medical Services Near You</div>
+      <div className='ListData'>
       {uniqueValues.map((data) => {
                
                 
@@ -94,7 +95,8 @@ function Userdata() {
              
            
            })}
-        </>
+      </div>
+        </div>
         
         ))}
     </>
